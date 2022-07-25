@@ -1,0 +1,157 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 328
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Color = xFF69E9D2
+    Size.Width = 328.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claNull
+    object TextCipherSample: TText
+      Align = Client
+      Size.Width = 328.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'DEC Laravel Encrypt sample'
+      TextSettings.Font.Size = 20.000000000000000000
+    end
+  end
+  object Rectangle2: TRectangle
+    Align = Top
+    Fill.Color = claNull
+    Position.Y = 90.000000000000000000
+    Size.Width = 328.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claNull
+    object TextKey: TText
+      Align = Left
+      Size.Width = 129.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'base64 encoded key:'
+    end
+    object EditKey: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Text = 'MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE='
+      Size.Width = 199.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Text1: TText
+    Align = Top
+    Position.Y = 50.000000000000000000
+    Size.Width = 328.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Encryption Algothrim: AES-256-CBC'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  object Rectangle3: TRectangle
+    Align = Top
+    Fill.Color = claNull
+    Position.Y = 129.000000000000000000
+    Size.Width = 328.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claNull
+    object TextIV: TText
+      Align = Left
+      Size.Width = 129.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'base64 encoded IV:'
+    end
+    object EditIV: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Size.Width = 199.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Auto generated'
+    end
+  end
+  object Rectangle4: TRectangle
+    Align = Top
+    Fill.Color = claNull
+    Position.Y = 168.000000000000000000
+    Size.Width = 328.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claNull
+    object TextPlainText: TText
+      Align = Left
+      Size.Width = 129.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Plain text:'
+    end
+    object EditPlain: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Size.Width = 199.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'input source string you want to encrypt'
+    end
+  end
+  object Rectangle5: TRectangle
+    Align = Top
+    Fill.Color = claNull
+    Position.Y = 207.000000000000000000
+    Size.Width = 328.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claNull
+    object TextBase64edCipher: TText
+      Align = Left
+      Size.Width = 129.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Cipher:'
+    end
+    object EditCipher: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Size.Width = 199.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'input source string you want to encrypt'
+    end
+  end
+  object btnEncrypt: TButton
+    Position.X = 49.000000000000000000
+    Position.Y = 288.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Encrypt It'
+    OnClick = btnEncryptClick
+  end
+  object btnDecrypt: TButton
+    Position.X = 201.000000000000000000
+    Position.Y = 288.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Decrypt It'
+    OnClick = btnDecryptClick
+  end
+end
